@@ -9,3 +9,4 @@ pickleshare
 datetime
 scikit-learn
 pickle5
+yfinance
