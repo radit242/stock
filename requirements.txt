@@ -1,0 +1,19 @@
+streamlit==1.25.0
+numpy==1.23.4
+pandas==2.0.3
+matplotlib==3.6.3
+yfinance==0.2.26
+prophet==1.1.4
+plotly==5.15.0
+keras== 2.13.1
+tensorflow==2.13.0
+pickleshare==0.7.5
+datetime==4.3
+prophet.plot==0.1
+sklearn.preprocessing==0.1.0
+matplolib.pyplot==3.6.3
+prophet.plot==0.1
+tensorflow.keras==2.13.0
+tensorflow.keras.layers==2.13.0
+tensorflow.keras.models==2.13.0
+pickle==0.7.5
