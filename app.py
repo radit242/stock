@@ -73,7 +73,7 @@ def forcast(n_years):
 
 forcast, future = forcast(n_years)
 
-@st.cache_data(show_spinner=False)
+
 def coping_df(df, future, _model):
     _scaler = MinMaxScaler(feature_range=(0,1))
     temp_df = df.copy()
