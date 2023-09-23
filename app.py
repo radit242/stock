@@ -26,7 +26,6 @@ stock = st.selectbox('Select dataset for prediction', stocks)
 start = '2010-01-01'
 end = date.datetime.now().strftime('%Y-%m-%d')
 
-
 #table of data 
 
 def read_data():
@@ -63,7 +62,7 @@ scaler = MinMaxScaler(feature_range=(0,1))
 st.subheader('Predictions for four months')
 n_years = 4/12
 
-
+@st.cache_data(show_spinner=False)
 def forcast(n_years):
     n = n_years+4
     period = int(n*365)
@@ -73,7 +72,7 @@ def forcast(n_years):
 
 forcast, future = forcast(n_years)
 
-
+@st.cache_data(show_spinner=False)
 def coping_df(df, future, _model):
     _scaler = MinMaxScaler(feature_range=(0,1))
     temp_df = df.copy()
@@ -189,4 +188,5 @@ fig.update_layout(
     height=500,
 )
 st.plotly_chart(fig, use_container_width=False)
+
 
