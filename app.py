@@ -23,8 +23,9 @@ st.title('Stock Prediction App')
 st.write("This app predicts the closing price of a stock for four months based on the data from the past 10 years.")
 stocks = ('GME','GOOG', 'AAPL', 'MSFT')
 stock = st.selectbox('Select dataset for prediction', stocks)
-start = '2020-01-01'
-end = '2021-01-01'
+start = '2010-01-01'
+end = date.datetime.now().strftime('%Y-%m-%d')
+
 
 #table of data 
 
@@ -62,7 +63,7 @@ scaler = MinMaxScaler(feature_range=(0,1))
 st.subheader('Predictions for four months')
 n_years = 4/12
 
-@st.cache_data(show_spinner=False)
+
 def forcast(n_years):
     n = n_years+4
     period = int(n*365)
