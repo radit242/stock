@@ -23,8 +23,8 @@ st.title('Stock Prediction App')
 st.write("This app predicts the closing price of a stock for four months based on the data from the past 10 years.")
 stocks = ('GME','GOOG', 'AAPL', 'MSFT')
 stock = st.selectbox('Select dataset for prediction', stocks)
-start = '2010-01-01'
-end = date.datetime.now().strftime('%Y-%m-%d')
+start = '2020-01-01'
+end = '2021-01-01'
 
 #table of data 
 
